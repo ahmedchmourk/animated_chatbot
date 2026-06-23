@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    @apply text-zinc-200 antialiased overflow-hidden selection:bg-white/20 transition-colors duration-1000 bg-black;
+  }
+}
+
+
+/* Pure Black Professional Theme */
+.theme-default {
+  background: #000000;
+}
+
+.theme-magical {
+  background: radial-gradient(circle at 50% -20%, #111111 0%, #000000 70%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+/* The Glassy Bubble (Preloader) */
+.glassy-bubble {
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.05) 40%, rgba(0,0,0,0.4) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 
+    inset 0 0 20px rgba(255,255,255,0.2),
+    inset 10px 0 20px rgba(255,255,255,0.1),
+    inset -10px 0 20px rgba(0,0,0,0.4),
+    0 0 30px rgba(255,255,255,0.1);
+}
+
+.glassy-glow {
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+}
